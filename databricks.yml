@@ -17,6 +17,8 @@ targets:
     default: true
     workspace:
       host: https://e2-demo-field-eng.cloud.databricks.com/
+    run_as:
+      service_principal_name: 5796bde7-4f1b-4bd2-8905-0266379064ac
 
   ## Optionally, there could be a 'staging' target here.
   ## (See Databricks docs on CI/CD at https://docs.databricks.com/dev-tools/bundles/ci-cd.html.)
@@ -38,4 +40,5 @@ targets:
     run_as:
       # This runs as lucas.depaula@databricks.com in production. We could also use a service principal here,
       # see https://docs.databricks.com/dev-tools/bundles/permissions.html.
-      user_name: lucas.depaula@databricks.com
+      service_principal_name: 5796bde7-4f1b-4bd2-8905-0266379064ac
+
