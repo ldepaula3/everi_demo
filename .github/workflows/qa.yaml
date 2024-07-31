@@ -14,7 +14,7 @@ on:
       - opened
       - synchronize
     branches:
-      - main
+      - maingit st
 
 jobs:
   # Used by the "pipeline_update" job to deploy the bundle.
