@@ -16,9 +16,9 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://e2-demo-field-eng.cloud.databricks.com/
+      host: https://adb-984752964297111.11.azuredatabricks.net
     run_as:
-      service_principal_name: 5796bde7-4f1b-4bd2-8905-0266379064ac
+      service_principal_name: 5796bde7-4f1b-4bd2-8905-0266379064ac 
 
   ## Optionally, there could be a 'staging' target here.
   ## (See Databricks docs on CI/CD at https://docs.databricks.com/dev-tools/bundles/ci-cd.html.)
@@ -33,7 +33,7 @@ targets:
     # Doing so enables strict verification of the settings below.
     mode: production
     workspace:
-      host: https://e2-demo-field-eng.cloud.databricks.com/
+      host: https://adb-984752964297111.11.azuredatabricks.net
       # We always use /Users/lucas.depaula@databricks.com for all resources to make sure we only have a single copy.
       # If this path results in an error, please make sure you have a recent version of the CLI installed.
       root_path: /Users/lucas.depaula@databricks.com/.bundle/${bundle.name}/${bundle.target}
