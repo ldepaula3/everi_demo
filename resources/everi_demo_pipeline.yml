@@ -1,0 +1,12 @@
+# The main pipeline for everi_demo
+resources:
+  pipelines:
+    everi_demo_pipeline:
+      name: everi_demo_pipeline
+      target: everi_demo_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: /Workspace/${workspace.file_path}/src
