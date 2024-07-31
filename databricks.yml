@@ -36,7 +36,8 @@ targets:
       host: https://adb-984752964297111.11.azuredatabricks.net
       # We always use /Users/lucas.depaula@databricks.com for all resources to make sure we only have a single copy.
       # If this path results in an error, please make sure you have a recent version of the CLI installed.
-      root_path: /Users/lucas.depaula@databricks.com/.bundle/${bundle.name}/${bundle.target}
+      root_path: /Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+                
     run_as:
       # This runs as lucas.depaula@databricks.com in production. We could also use a service principal here,
       # see https://docs.databricks.com/dev-tools/bundles/permissions.html.
