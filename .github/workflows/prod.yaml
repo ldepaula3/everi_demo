@@ -31,7 +31,7 @@ jobs:
       - run: databricks bundle deploy
         working-directory: .
         env:
-          DATABRICKS_TOKEN: ${{ SP_TOKEN }}
+          DATABRICKS_TOKEN: ${{ secrets.SP_TOKEN }}
           DATABRICKS_BUNDLE_ENV: prod
 
   # Validate, deploy, and then run the bundle.
@@ -55,5 +55,5 @@ jobs:
       - run: databricks bundle run my-job --refresh-all
         working-directory: .
         env:
-          DATABRICKS_TOKEN: ${{ SP_TOKEN }}
+          DATABRICKS_TOKEN: ${{ secrets.SP_TOKEN }}
           DATABRICKS_BUNDLE_ENV: prod
